@@ -1,0 +1,151 @@
+/* ============================================
+   ОБЩИЕ СТИЛИ
+   ============================================ */
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: #1a1a1a;
+    line-height: 1.5;
+    background: #ffffff;
+}
+
+h1, h2, h3 {
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+/* Контейнер для ограничения ширины контента */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+/* ============================================
+   HEADER (Шапка)
+   ============================================ */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 16px;
+    letter-spacing: 4px;
+    background: #000000;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 20px;
+}
+
+.nav {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-link {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: #1a1a1a;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #888888;
+}
+
+/* ============================================
+   HERO (Главный экран с фоновым изображением)
+   ============================================ */
+.hero {
+    /* Фоновое изображение */
+    background-image: url('images/Docteur-stetoscope-famille-mains-web.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Полупрозрачный голубой слой поверх картинки */
+    background-color: rgba(230, 244, 250, 0.85);
+    
+    /* Отступы и размеры */
+    padding: 100px 60px;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    
+    /* Позиционирование контента */
+    position: relative;
+}
+
+/* Дополнительный полупрозрачный слой для лучшей читаемости (опционально) */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(231, 230, 250, 0); /* Голубой полупрозрачный */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Контент поверх фона */
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    color: #1a1a1a;
+}
+
+.hero-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 32px;
+    color: #333333;
+}
+
+/* ============================================
+   КНОПКА
+   ============================================ */
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #1a1a1a;
+    background: #ffffff;
+    border: 2px solid #1a1a1a;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #1a1a1a;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.btn:focus {
+    outline: 3px solid #4a90e2;
+    outline-offset: 2px;
+}
+
+.btn:active {
+    transform: translateY(0);
+    background: #333333;
+}
