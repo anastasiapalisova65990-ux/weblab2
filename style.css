@@ -55,7 +55,7 @@ body {
 .hero {
     /* Фоновое изображение + полупрозрачный голубой слой поверх */
     background-image: 
-        linear-gradient(rgba(230, 244, 250, 0.85), rgba(230, 244, 250, 0.85)),
+        linear-gradient(rgba(230, 244, 250, 0.1), rgba(230, 244, 250, 0.1)),
         url('Docteur-stetoscope-famille-mains-web.jpg');
     
     background-size: cover;
